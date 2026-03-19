@@ -178,6 +178,12 @@
     <button class="nav-btn" onclick="showCfg('rates',this)">Rates</button>
     <button class="nav-btn" onclick="showCfg('github',this)">GitHub</button>
   </div>
+  <!-- Config actions pinned at top -->
+  <div style="display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--border);flex-shrink:0;background:var(--surface)">
+    <button class="btn sm" onclick="exportConfig()" style="flex:1">⬇ Save config</button>
+    <button class="btn sm" onclick="document.getElementById('cfg-file').click()" style="flex:1">⬆ Load config</button>
+    <input type="file" id="cfg-file" accept=".json" style="display:none" onchange="importConfig(event)">
+  </div>
   <div class="sidebar-body">
 
     <!-- Business -->
@@ -235,11 +241,7 @@
     </div>
 
   </div><!-- /sidebar-body -->
-  <div class="cfg-actions">
-    <button class="btn sm" onclick="exportConfig()" style="flex:1">⬇ Save config</button>
-    <button class="btn sm" onclick="document.getElementById('cfg-file').click()" style="flex:1">⬆ Load config</button>
-    <input type="file" id="cfg-file" accept=".json" style="display:none" onchange="importConfig(event)">
-  </div>
+
 </div><!-- /sidebar -->
 
 <!-- ══════════════ MAIN ══════════════ -->
